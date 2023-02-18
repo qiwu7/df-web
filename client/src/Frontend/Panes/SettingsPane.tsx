@@ -65,7 +65,7 @@ export function SettingsPane({
     ethConnection
       .setRpcUrl(rpcUrl)
       .then(() => {
-        localStorage.setItem('XDAI_RPC_ENDPOINT_v5', rpcUrl);
+        localStorage.setItem('RPC_ENDPOINT', rpcUrl);
       })
       .catch(() => {
         setRpcURL(ethConnection.getRpcEndpoint());
