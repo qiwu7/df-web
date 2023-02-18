@@ -84,6 +84,7 @@
     "clean": "del-cli artifacts cache subgraph/build node_modules tsconfig.ref.tsbuildinfo",
     "wait:node": "wait-on tcp:8545",
     "deploy:contracts": "hardhat --network localhost deploy",
+    "deploy:contracts:goerli": "hardhat --network base_goerli deploy",
     "hardhat:deploy": "run-s wait:node \"deploy:contracts {@}\" --",
     "start": "run-p hardhat:node \"hardhat:deploy {@}\" --"
   }

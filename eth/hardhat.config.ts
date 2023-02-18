@@ -65,25 +65,25 @@ extendEnvironment((env: HardhatRuntimeEnvironment) => {
   });
 });
 
-// The xdai config, but it isn't added to networks unless we have a DEPLOYER_MNEMONIC
-const xdai = {
-  url: process.env.XDAI_RPC_URL ?? 'https://rpc-df.xdaichain.com/',
+// The base-goerli config, but it isn't added to networks unless we have a DEPLOYER_MNEMONIC
+const base_goerli = {
+  url: process.env.BASE_GOERLI_RPC_URL ?? 'https://base-goerli.cbhq.net/',
   accounts: {
     mnemonic: DEPLOYER_MNEMONIC,
   },
-  chainId: 100,
+  chainId: 84531,
   gasMultiplier: 5,
 };
 
 // The mainnet config, but it isn't added to networks unless we have a DEPLOYER_MNEMONIC
-const mainnet = {
-  // Brian's Infura endpoint (free tier)
-  url: 'https://mainnet.infura.io/v3/5459b6d562eb47f689c809fe0b78408e',
-  accounts: {
-    mnemonic: DEPLOYER_MNEMONIC,
-  },
-  chainId: 1,
-};
+// const mainnet = {
+//   // Brian's Infura endpoint (free tier)
+//   url: 'https://mainnet.infura.io/v3/5459b6d562eb47f689c809fe0b78408e',
+//   accounts: {
+//     mnemonic: DEPLOYER_MNEMONIC,
+//   },
+//   chainId: 1,
+// };
 
 const config: HardhatUserConfig = {
   defaultNetwork: 'hardhat',
@@ -91,8 +91,8 @@ const config: HardhatUserConfig = {
     // Check for a DEPLOYER_MNEMONIC before we add xdai/mainnet network to the list of networks
     // Ex: If you try to deploy to xdai without DEPLOYER_MNEMONIC, you'll see this error:
     // > Error HH100: Network xdai doesn't exist
-    ...(DEPLOYER_MNEMONIC ? { xdai } : undefined),
-    ...(DEPLOYER_MNEMONIC ? { mainnet } : undefined),
+    ...(DEPLOYER_MNEMONIC ? { base_goerli } : undefined),
+    // ...(DEPLOYER_MNEMONIC ? { mainnet } : undefined),
     localhost: {
       url: 'http://localhost:8545/',
       accounts: {
