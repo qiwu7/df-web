@@ -2850,7 +2850,7 @@ class GameManager extends EventEmitter {
 
   /**
    * Submits a transaction to the blockchain to buy a hat for the given planet. You must own the
-   * planet. Warning costs real xdai. Hats are permanently locked to a planet. They are purely
+   * planet. Warning costs real ETH. Hats are permanently locked to a planet. They are purely
    * cosmetic and a great way to BM your opponents or just look your best. Just like in the real
    * world, more money means more hat.
    */

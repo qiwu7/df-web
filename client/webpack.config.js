@@ -33,6 +33,8 @@ module.exports = {
     publicPath: '/',
     clean: true,
   },
+  // Turn off warnings
+  performance: { hints: false },
 
   // Enable sourcemaps for debugging webpack's output.
   devtool: 'source-map',
