@@ -67,7 +67,7 @@ extendEnvironment((env: HardhatRuntimeEnvironment) => {
 
 // The base-goerli config, but it isn't added to networks unless we have a DEPLOYER_MNEMONIC
 const base_goerli = {
-  url: process.env.BASE_GOERLI_RPC_URL ?? 'https://base-goerli.cbhq.net/',
+  url: process.env.BASE_RPC_URL ?? 'https://base-goerli.cbhq.net/',
   accounts: {
     mnemonic: DEPLOYER_MNEMONIC,
   },
