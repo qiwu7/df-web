@@ -90,7 +90,7 @@ export default function LandingPage() {
             <LandingPageRoundArt />
 
             <p>
-              <White>Base Dark Forest</White> <Text>zkSNARK space warfare</Text>
+              <White>BASE Dark Forest</White> <Text>zkSNARK space warfare</Text>
               <br />
               <Text>Round 1: </Text>
               <White>The Basics</White>
