@@ -5,7 +5,7 @@
   "license": "GPL-3.0",
   "author": "0xPARC <ivan@0xPARC.org>",
   "main": "index.js",
-  "devDependencies": {
+  "dependencies": {
     "@darkforest_eth/contracts": "6.7.0-dev.0",
     "@darkforest_eth/whitelist": "6.7.0-dev.0",
     "@darkforest_eth/hashing": "6.7.0-dev.0",
