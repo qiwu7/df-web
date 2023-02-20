@@ -19,14 +19,14 @@ export async function loadDiamondContract<T extends Contract>(
 export function getEthConnection(): Promise<EthConnection> {
   const isProd = process.env.NODE_ENV === 'production';
   const defaultUrl = process.env.DEFAULT_RPC as string;
+  const url = localStorage.getItem('RPC_ENDPOINT') || defaultUrl;
 
-  let url: string;
-
-  if (isProd) {
-    url = localStorage.getItem('RPC_ENDPOINT') || defaultUrl;
-  } else {
-    url = 'http://localhost:8545';
-  }
+  // let url: string;
+  // if (isProd) {
+  //   url = localStorage.getItem('RPC_ENDPOINT') || defaultUrl;
+  // } else {
+  //   url = 'http://localhost:8545';
+  // }
 
   console.log(`GAME METADATA:`);
   console.log(`rpc url: ${url}`);
